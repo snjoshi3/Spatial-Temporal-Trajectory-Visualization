@@ -1,0 +1,243 @@
+2022.10.15 10:48:33 INFO  tracing is disabled for protocol LSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/trickster/Downloads/courses/CSE594/Project/Project-Phase-1/SDSE-Phase-1/.metals/lsp.trace.json or /Users/trickster/Library/Caches/org.scalameta.metals/lsp.trace.json
+2022.10.15 10:48:34 INFO  logging to file /Users/trickster/Downloads/courses/CSE594/Project/Project-Phase-1/SDSE-Phase-1/.metals/metals.log
+2022.10.15 10:48:34 INFO  Started: Metals version 0.11.9 in workspace '/Users/trickster/Downloads/courses/CSE594/Project/Project-Phase-1/SDSE-Phase-1' for client Visual Studio Code 1.71.2.
+2022.10.15 10:48:36 INFO  time: initialize in 2.37s
+2022.10.15 10:48:37 WARN  Build server is not auto-connectable.
+2022.10.15 10:48:37 WARN  no build target for: /Users/trickster/Downloads/courses/CSE594/Project/Project-Phase-1/SDSE-Phase-1/src/main/scala/ManageTrajectory.scala
+2022.10.15 10:48:37 WARN  no build target for: /Users/trickster/Downloads/courses/CSE594/Project/Project-Phase-1/SDSE-Phase-1/src/main/scala/Entrance.scala
+2022.10.15 10:48:43 INFO  no build target found for /Users/trickster/Downloads/courses/CSE594/Project/Project-Phase-1/SDSE-Phase-1/src/main/scala/Entrance.scala. Using presentation compiler with project's scala-library version: 3.2.0
+Downloading https://repo1.maven.org/maven2/org/scalameta/scalafmt-core_2.13/3.5.3/scalafmt-core_2.13-3.5.3.pom
+Downloaded https://repo1.maven.org/maven2/org/scalameta/scalafmt-core_2.13/3.5.3/scalafmt-core_2.13-3.5.3.pom
+Downloading https://repo1.maven.org/maven2/org/scalameta/scalafmt-config_2.13/3.5.3/scalafmt-config_2.13-3.5.3.pom
+Downloading https://repo1.maven.org/maven2/org/scalameta/scalameta_2.13/4.5.5/scalameta_2.13-4.5.5.pom
+Downloading https://repo1.maven.org/maven2/org/scalameta/scalafmt-sysops_2.13/3.5.3/scalafmt-sysops_2.13-3.5.3.pom
+Downloaded https://repo1.maven.org/maven2/org/scalameta/scalafmt-config_2.13/3.5.3/scalafmt-config_2.13-3.5.3.pom
+Downloaded https://repo1.maven.org/maven2/org/scalameta/scalafmt-sysops_2.13/3.5.3/scalafmt-sysops_2.13-3.5.3.pom
+Downloaded https://repo1.maven.org/maven2/org/scalameta/scalameta_2.13/4.5.5/scalameta_2.13-4.5.5.pom
+Downloading https://repo1.maven.org/maven2/org/scalameta/parsers_2.13/4.5.5/parsers_2.13-4.5.5.pom
+Downloading https://repo1.maven.org/maven2/org/scala-lang/scalap/2.13.8/scalap-2.13.8.pom
+Downloading https://repo1.maven.org/maven2/com/geirsson/metaconfig-core_2.13/0.10.0/metaconfig-core_2.13-0.10.0.pom
+Downloading https://repo1.maven.org/maven2/com/geirsson/metaconfig-typesafe-config_2.13/0.10.0/metaconfig-typesafe-config_2.13-0.10.0.pom
+Downloaded https://repo1.maven.org/maven2/com/geirsson/metaconfig-typesafe-config_2.13/0.10.0/metaconfig-typesafe-config_2.13-0.10.0.pom
+Downloaded https://repo1.maven.org/maven2/com/geirsson/metaconfig-core_2.13/0.10.0/metaconfig-core_2.13-0.10.0.pom
+Downloaded https://repo1.maven.org/maven2/org/scalameta/parsers_2.13/4.5.5/parsers_2.13-4.5.5.pom
+Downloaded https://repo1.maven.org/maven2/org/scala-lang/scalap/2.13.8/scalap-2.13.8.pom
+Downloading https://repo1.maven.org/maven2/org/scala-lang/scala-compiler/2.13.8/scala-compiler-2.13.8.pom
+Downloading https://repo1.maven.org/maven2/com/geirsson/metaconfig-pprint_2.13/0.10.0/metaconfig-pprint_2.13-0.10.0.pom
+Downloading https://repo1.maven.org/maven2/org/scala-lang/modules/scala-collection-compat_2.13/2.5.0/scala-collection-compat_2.13-2.5.0.pom
+Downloading https://repo1.maven.org/maven2/com/typesafe/config/1.4.1/config-1.4.1.pom
+Downloading https://repo1.maven.org/maven2/org/scalameta/trees_2.13/4.5.5/trees_2.13-4.5.5.pom
+Downloaded https://repo1.maven.org/maven2/org/scala-lang/modules/scala-collection-compat_2.13/2.5.0/scala-collection-compat_2.13-2.5.0.pom
+Downloaded https://repo1.maven.org/maven2/org/scala-lang/scala-compiler/2.13.8/scala-compiler-2.13.8.pom
+Downloaded https://repo1.maven.org/maven2/com/typesafe/config/1.4.1/config-1.4.1.pom
+Downloaded https://repo1.maven.org/maven2/com/geirsson/metaconfig-pprint_2.13/0.10.0/metaconfig-pprint_2.13-0.10.0.pom
+Downloaded https://repo1.maven.org/maven2/org/scalameta/trees_2.13/4.5.5/trees_2.13-4.5.5.pom
+Downloading https://repo1.maven.org/maven2/net/java/dev/jna/jna/5.9.0/jna-5.9.0.pom
+Downloading https://repo1.maven.org/maven2/org/scalameta/common_2.13/4.5.5/common_2.13-4.5.5.pom
+Downloaded https://repo1.maven.org/maven2/net/java/dev/jna/jna/5.9.0/jna-5.9.0.pom
+Downloaded https://repo1.maven.org/maven2/org/scalameta/common_2.13/4.5.5/common_2.13-4.5.5.pom
+Downloading https://repo1.maven.org/maven2/com/lihaoyi/geny_2.13/0.6.5/geny_2.13-0.6.5.pom
+Downloading https://repo1.maven.org/maven2/com/lihaoyi/sourcecode_2.13/0.2.7/sourcecode_2.13-0.2.7.pom
+Downloaded https://repo1.maven.org/maven2/com/lihaoyi/geny_2.13/0.6.5/geny_2.13-0.6.5.pom
+Downloaded https://repo1.maven.org/maven2/com/lihaoyi/sourcecode_2.13/0.2.7/sourcecode_2.13-0.2.7.pom
+Downloading https://repo1.maven.org/maven2/org/scala-lang/scalap/2.13.8/scalap-2.13.8.jar
+Downloading https://repo1.maven.org/maven2/com/geirsson/metaconfig-pprint_2.13/0.10.0/metaconfig-pprint_2.13-0.10.0.jar
+Downloading https://repo1.maven.org/maven2/org/scalameta/parsers_2.13/4.5.5/parsers_2.13-4.5.5.jar
+Downloading https://repo1.maven.org/maven2/net/java/dev/jna/jna/5.9.0/jna-5.9.0.jar
+Downloading https://repo1.maven.org/maven2/org/scalameta/common_2.13/4.5.5/common_2.13-4.5.5.jar
+Downloading https://repo1.maven.org/maven2/org/scalameta/scalameta_2.13/4.5.5/scalameta_2.13-4.5.5.jar
+Downloaded https://repo1.maven.org/maven2/com/geirsson/metaconfig-pprint_2.13/0.10.0/metaconfig-pprint_2.13-0.10.0.jar
+Downloading https://repo1.maven.org/maven2/org/scalameta/scalafmt-config_2.13/3.5.3/scalafmt-config_2.13-3.5.3.jar
+Downloaded https://repo1.maven.org/maven2/org/scalameta/scalafmt-config_2.13/3.5.3/scalafmt-config_2.13-3.5.3.jar
+Downloading https://repo1.maven.org/maven2/org/scalameta/scalafmt-sysops_2.13/3.5.3/scalafmt-sysops_2.13-3.5.3.jar
+Downloaded https://repo1.maven.org/maven2/org/scala-lang/scalap/2.13.8/scalap-2.13.8.jar
+Downloading https://repo1.maven.org/maven2/com/typesafe/config/1.4.1/config-1.4.1.jar
+Downloaded https://repo1.maven.org/maven2/net/java/dev/jna/jna/5.9.0/jna-5.9.0.jar
+Downloading https://repo1.maven.org/maven2/com/lihaoyi/geny_2.13/0.6.5/geny_2.13-0.6.5.jar
+Downloaded https://repo1.maven.org/maven2/org/scalameta/scalafmt-sysops_2.13/3.5.3/scalafmt-sysops_2.13-3.5.3.jar
+Downloading https://repo1.maven.org/maven2/org/scala-lang/modules/scala-collection-compat_2.13/2.5.0/scala-collection-compat_2.13-2.5.0.jar
+Downloaded https://repo1.maven.org/maven2/com/lihaoyi/geny_2.13/0.6.5/geny_2.13-0.6.5.jar
+Downloading https://repo1.maven.org/maven2/com/geirsson/metaconfig-typesafe-config_2.13/0.10.0/metaconfig-typesafe-config_2.13-0.10.0.jar
+Downloaded https://repo1.maven.org/maven2/com/typesafe/config/1.4.1/config-1.4.1.jar
+Downloading https://repo1.maven.org/maven2/com/lihaoyi/sourcecode_2.13/0.2.7/sourcecode_2.13-0.2.7.jar
+Downloaded https://repo1.maven.org/maven2/org/scalameta/scalameta_2.13/4.5.5/scalameta_2.13-4.5.5.jar
+Downloading https://repo1.maven.org/maven2/org/scalameta/scalafmt-core_2.13/3.5.3/scalafmt-core_2.13-3.5.3.jar
+Downloaded https://repo1.maven.org/maven2/com/lihaoyi/sourcecode_2.13/0.2.7/sourcecode_2.13-0.2.7.jar
+Downloading https://repo1.maven.org/maven2/org/scala-lang/scala-compiler/2.13.8/scala-compiler-2.13.8.jar
+Downloaded https://repo1.maven.org/maven2/com/geirsson/metaconfig-typesafe-config_2.13/0.10.0/metaconfig-typesafe-config_2.13-0.10.0.jar
+Downloading https://repo1.maven.org/maven2/org/scala-lang/scala-reflect/2.13.8/scala-reflect-2.13.8.jar
+Downloaded https://repo1.maven.org/maven2/org/scala-lang/modules/scala-collection-compat_2.13/2.5.0/scala-collection-compat_2.13-2.5.0.jar
+Downloading https://repo1.maven.org/maven2/org/scalameta/trees_2.13/4.5.5/trees_2.13-4.5.5.jar
+Downloaded https://repo1.maven.org/maven2/org/scalameta/parsers_2.13/4.5.5/parsers_2.13-4.5.5.jar
+Downloading https://repo1.maven.org/maven2/com/geirsson/metaconfig-core_2.13/0.10.0/metaconfig-core_2.13-0.10.0.jar
+Downloaded https://repo1.maven.org/maven2/com/geirsson/metaconfig-core_2.13/0.10.0/metaconfig-core_2.13-0.10.0.jar
+Downloaded https://repo1.maven.org/maven2/org/scalameta/scalafmt-core_2.13/3.5.3/scalafmt-core_2.13-3.5.3.jar
+Downloaded https://repo1.maven.org/maven2/org/scalameta/common_2.13/4.5.5/common_2.13-4.5.5.jar
+Downloaded https://repo1.maven.org/maven2/org/scala-lang/scala-reflect/2.13.8/scala-reflect-2.13.8.jar
+Downloaded https://repo1.maven.org/maven2/org/scalameta/trees_2.13/4.5.5/trees_2.13-4.5.5.jar
+Downloaded https://repo1.maven.org/maven2/org/scala-lang/scala-compiler/2.13.8/scala-compiler-2.13.8.jar
+2022.10.15 10:54:27 WARN  no build target for: /Users/trickster/Downloads/courses/CSE594/Project/Project-Phase-1/SDSE-Phase-1/src/main/scala/ManageTrajectory.scala
+2022.10.15 10:54:27 WARN  no build target for: /Users/trickster/Downloads/courses/CSE594/Project/Project-Phase-1/SDSE-Phase-1/src/main/scala/ManageTrajectory.scala
+2022.10.15 10:55:43 WARN  no build target for: /Users/trickster/Downloads/courses/CSE594/Project/Project-Phase-1/SDSE-Phase-1/src/main/scala/ManageTrajectory.scala
+2022.10.15 10:55:44 WARN  no build target for: /Users/trickster/Downloads/courses/CSE594/Project/Project-Phase-1/SDSE-Phase-1/src/main/scala/ManageTrajectory.scala
+2022.10.15 10:58:34 WARN  no build target for: /Users/trickster/Downloads/courses/CSE594/Project/Project-Phase-1/SDSE-Phase-1/src/main/scala/ManageTrajectory.scala
+2022.10.15 10:59:39 WARN  no build target for: /Users/trickster/Downloads/courses/CSE594/Project/Project-Phase-1/SDSE-Phase-1/src/main/scala/ManageTrajectory.scala
+2022.10.15 10:59:39 WARN  no build target for: /Users/trickster/Downloads/courses/CSE594/Project/Project-Phase-1/SDSE-Phase-1/src/main/scala/ManageTrajectory.scala
+2022.10.15 11:00:20 WARN  no build target for: /Users/trickster/Downloads/courses/CSE594/Project/Project-Phase-1/SDSE-Phase-1/src/main/scala/ManageTrajectory.scala
+2022.10.15 11:01:30 WARN  no build target for: /Users/trickster/Downloads/courses/CSE594/Project/Project-Phase-1/SDSE-Phase-1/src/main/scala/ManageTrajectory.scala
+2022.10.15 11:01:32 WARN  no build target for: /Users/trickster/Downloads/courses/CSE594/Project/Project-Phase-1/SDSE-Phase-1/src/main/scala/ManageTrajectory.scala
+2022.10.15 11:01:32 WARN  no build target for: /Users/trickster/Downloads/courses/CSE594/Project/Project-Phase-1/SDSE-Phase-1/src/main/scala/ManageTrajectory.scala
+2022.10.15 11:06:33 WARN  no build target for: /Users/trickster/Downloads/courses/CSE594/Project/Project-Phase-1/SDSE-Phase-1/src/main/scala/ManageTrajectory.scala
+2022.10.15 11:06:34 WARN  no build target for: /Users/trickster/Downloads/courses/CSE594/Project/Project-Phase-1/SDSE-Phase-1/src/main/scala/ManageTrajectory.scala
+2022.10.15 11:06:55 WARN  no build target for: /Users/trickster/Downloads/courses/CSE594/Project/Project-Phase-1/SDSE-Phase-1/src/main/scala/ManageTrajectory.scala
+2022.10.15 11:07:01 WARN  no build target for: /Users/trickster/Downloads/courses/CSE594/Project/Project-Phase-1/SDSE-Phase-1/src/main/scala/ManageTrajectory.scala
+2022.10.15 11:07:22 WARN  no build target for: /Users/trickster/Downloads/courses/CSE594/Project/Project-Phase-1/SDSE-Phase-1/src/main/scala/ManageTrajectory.scala
+2022.10.15 11:07:22 WARN  no build target for: /Users/trickster/Downloads/courses/CSE594/Project/Project-Phase-1/SDSE-Phase-1/src/main/scala/ManageTrajectory.scala
+2022.10.15 11:07:22 WARN  no build target for: /Users/trickster/Downloads/courses/CSE594/Project/Project-Phase-1/SDSE-Phase-1/src/main/scala/ManageTrajectory.scala
+2022.10.15 11:07:57 WARN  no build target for: /Users/trickster/Downloads/courses/CSE594/Project/Project-Phase-1/SDSE-Phase-1/src/main/scala/ManageTrajectory.scala
+2022.10.15 11:07:57 WARN  no build target for: /Users/trickster/Downloads/courses/CSE594/Project/Project-Phase-1/SDSE-Phase-1/src/main/scala/ManageTrajectory.scala
+2022.10.15 11:08:07 WARN  no build target for: /Users/trickster/Downloads/courses/CSE594/Project/Project-Phase-1/SDSE-Phase-1/src/main/scala/ManageTrajectory.scala
+2022.10.15 11:08:07 WARN  no build target for: /Users/trickster/Downloads/courses/CSE594/Project/Project-Phase-1/SDSE-Phase-1/src/main/scala/ManageTrajectory.scala
+2022.10.15 11:08:21 WARN  no build target for: /Users/trickster/Downloads/courses/CSE594/Project/Project-Phase-1/SDSE-Phase-1/src/main/scala/ManageTrajectory.scala
+2022.10.15 11:08:21 WARN  no build target for: /Users/trickster/Downloads/courses/CSE594/Project/Project-Phase-1/SDSE-Phase-1/src/main/scala/ManageTrajectory.scala
+2022.10.15 11:08:21 WARN  no build target for: /Users/trickster/Downloads/courses/CSE594/Project/Project-Phase-1/SDSE-Phase-1/src/main/scala/ManageTrajectory.scala
+2022.10.15 11:08:21 WARN  no build target for: /Users/trickster/Downloads/courses/CSE594/Project/Project-Phase-1/SDSE-Phase-1/src/main/scala/ManageTrajectory.scala
+2022.10.15 11:08:27 WARN  no build target for: /Users/trickster/Downloads/courses/CSE594/Project/Project-Phase-1/SDSE-Phase-1/src/main/scala/ManageTrajectory.scala
+2022.10.15 11:10:19 WARN  no build target for: /Users/trickster/Downloads/courses/CSE594/Project/Project-Phase-1/SDSE-Phase-1/src/main/scala/ManageTrajectory.scala
+2022.10.15 11:10:20 WARN  no build target for: /Users/trickster/Downloads/courses/CSE594/Project/Project-Phase-1/SDSE-Phase-1/src/main/scala/ManageTrajectory.scala
+2022.10.15 11:10:20 WARN  no build target for: /Users/trickster/Downloads/courses/CSE594/Project/Project-Phase-1/SDSE-Phase-1/src/main/scala/ManageTrajectory.scala
+2022.10.15 11:10:20 WARN  no build target for: /Users/trickster/Downloads/courses/CSE594/Project/Project-Phase-1/SDSE-Phase-1/src/main/scala/ManageTrajectory.scala
+2022.10.15 11:10:27 WARN  no build target for: /Users/trickster/Downloads/courses/CSE594/Project/Project-Phase-1/SDSE-Phase-1/src/main/scala/ManageTrajectory.scala
+2022.10.15 11:10:41 WARN  no build target for: /Users/trickster/Downloads/courses/CSE594/Project/Project-Phase-1/SDSE-Phase-1/src/main/scala/ManageTrajectory.scala
+2022.10.15 11:10:44 WARN  no build target for: /Users/trickster/Downloads/courses/CSE594/Project/Project-Phase-1/SDSE-Phase-1/src/main/scala/ManageTrajectory.scala
+2022.10.15 11:10:44 WARN  no build target for: /Users/trickster/Downloads/courses/CSE594/Project/Project-Phase-1/SDSE-Phase-1/src/main/scala/ManageTrajectory.scala
+2022.10.15 11:11:12 WARN  no build target for: /Users/trickster/Downloads/courses/CSE594/Project/Project-Phase-1/SDSE-Phase-1/src/main/scala/ManageTrajectory.scala
+2022.10.15 11:11:13 WARN  no build target for: /Users/trickster/Downloads/courses/CSE594/Project/Project-Phase-1/SDSE-Phase-1/src/main/scala/ManageTrajectory.scala
+2022.10.15 11:11:15 WARN  no build target for: /Users/trickster/Downloads/courses/CSE594/Project/Project-Phase-1/SDSE-Phase-1/src/main/scala/ManageTrajectory.scala
+2022.10.15 11:11:37 WARN  no build target for: /Users/trickster/Downloads/courses/CSE594/Project/Project-Phase-1/SDSE-Phase-1/src/main/scala/ManageTrajectory.scala
+2022.10.15 11:11:37 WARN  no build target for: /Users/trickster/Downloads/courses/CSE594/Project/Project-Phase-1/SDSE-Phase-1/src/main/scala/ManageTrajectory.scala
+2022.10.15 11:11:49 WARN  no build target for: /Users/trickster/Downloads/courses/CSE594/Project/Project-Phase-1/SDSE-Phase-1/src/main/scala/ManageTrajectory.scala
+2022.10.15 11:13:50 WARN  no build target for: /Users/trickster/Downloads/courses/CSE594/Project/Project-Phase-1/SDSE-Phase-1/src/main/scala/Entrance.scala
+2022.10.15 11:13:59 WARN  no build target for: /Users/trickster/Downloads/courses/CSE594/Project/Project-Phase-1/SDSE-Phase-1/src/main/scala/Entrance.scala
+2022.10.15 11:13:59 WARN  no build target for: /Users/trickster/Downloads/courses/CSE594/Project/Project-Phase-1/SDSE-Phase-1/src/main/scala/Entrance.scala
+2022.10.15 12:43:54 WARN  no build target for: /Users/trickster/Downloads/courses/CSE594/Project/Project-Phase-1/SDSE-Phase-1/src/main/scala/ManageTrajectory.scala
+2022.10.15 12:44:03 WARN  no build target for: /Users/trickster/Downloads/courses/CSE594/Project/Project-Phase-1/SDSE-Phase-1/src/main/scala/ManageTrajectory.scala
+2022.10.15 12:44:04 WARN  no build target for: /Users/trickster/Downloads/courses/CSE594/Project/Project-Phase-1/SDSE-Phase-1/src/main/scala/ManageTrajectory.scala
+2022.10.15 12:44:06 WARN  no build target for: /Users/trickster/Downloads/courses/CSE594/Project/Project-Phase-1/SDSE-Phase-1/src/main/scala/ManageTrajectory.scala
+2022.10.15 12:44:09 WARN  no build target for: /Users/trickster/Downloads/courses/CSE594/Project/Project-Phase-1/SDSE-Phase-1/src/main/scala/ManageTrajectory.scala
+2022.10.15 12:44:10 WARN  no build target for: /Users/trickster/Downloads/courses/CSE594/Project/Project-Phase-1/SDSE-Phase-1/src/main/scala/ManageTrajectory.scala
+2022.10.15 12:44:36 WARN  no build target for: /Users/trickster/Downloads/courses/CSE594/Project/Project-Phase-1/SDSE-Phase-1/src/main/scala/ManageTrajectory.scala
+2022.10.15 12:45:25 WARN  no build target for: /Users/trickster/Downloads/courses/CSE594/Project/Project-Phase-1/SDSE-Phase-1/src/main/scala/ManageTrajectory.scala
+2022.10.15 12:45:25 WARN  no build target for: /Users/trickster/Downloads/courses/CSE594/Project/Project-Phase-1/SDSE-Phase-1/src/main/scala/ManageTrajectory.scala
+2022.10.15 12:46:27 WARN  no build target for: /Users/trickster/Downloads/courses/CSE594/Project/Project-Phase-1/SDSE-Phase-1/src/main/scala/ManageTrajectory.scala
+2022.10.15 12:47:50 WARN  no build target for: /Users/trickster/Downloads/courses/CSE594/Project/Project-Phase-1/SDSE-Phase-1/src/main/scala/ManageTrajectory.scala
+2022.10.15 12:47:50 WARN  no build target for: /Users/trickster/Downloads/courses/CSE594/Project/Project-Phase-1/SDSE-Phase-1/src/main/scala/ManageTrajectory.scala
+2022.10.15 12:47:58 WARN  no build target for: /Users/trickster/Downloads/courses/CSE594/Project/Project-Phase-1/SDSE-Phase-1/src/main/scala/ManageTrajectory.scala
+2022.10.15 12:50:51 WARN  no build target for: /Users/trickster/Downloads/courses/CSE594/Project/Project-Phase-1/SDSE-Phase-1/src/main/scala/ManageTrajectory.scala
+2022.10.15 12:50:51 WARN  no build target for: /Users/trickster/Downloads/courses/CSE594/Project/Project-Phase-1/SDSE-Phase-1/src/main/scala/ManageTrajectory.scala
+2022.10.15 12:51:10 WARN  no build target for: /Users/trickster/Downloads/courses/CSE594/Project/Project-Phase-1/SDSE-Phase-1/src/main/scala/ManageTrajectory.scala
+2022.10.15 12:51:18 INFO  shutting down Metals
+2022.10.15 13:18:13 INFO  tracing is disabled for protocol LSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/trickster/Downloads/courses/CSE594/Project/Project-Phase-1/SDSE-Phase-1/.metals/lsp.trace.json or /Users/trickster/Library/Caches/org.scalameta.metals/lsp.trace.json
+2022.10.15 13:18:14 INFO  logging to file /Users/trickster/Downloads/courses/CSE594/Project/Project-Phase-1/SDSE-Phase-1/.metals/metals.log
+2022.10.15 13:18:14 INFO  Started: Metals version 0.11.9 in workspace '/Users/trickster/Downloads/courses/CSE594/Project/Project-Phase-1/SDSE-Phase-1' for client Visual Studio Code 1.71.2.
+2022.10.15 13:18:15 INFO  time: initialize in 1.66s
+2022.10.15 13:18:16 WARN  Build server is not auto-connectable.
+2022.10.15 13:19:19 WARN  no build target for: /Users/trickster/Downloads/courses/CSE594/Project/Project-Phase-1/SDSE-Phase-1/src/main/scala/Entrance.scala
+2022.10.15 13:19:21 INFO  no build target found for /Users/trickster/Downloads/courses/CSE594/Project/Project-Phase-1/SDSE-Phase-1/src/main/scala/Entrance.scala. Using presentation compiler with project's scala-library version: 3.2.0
+2022.10.15 13:19:23 INFO  time: code lens generation in 2.37s
+2022.10.15 13:19:23 INFO  time: code lens generation in 2.04s
+2022.10.15 13:20:42 WARN  no build target for: /Users/trickster/Downloads/courses/CSE594/Project/Project-Phase-1/SDSE-Phase-1/src/main/scala/ManageTrajectory.scala
+2022.10.15 13:21:32 WARN  no build target for: /Users/trickster/Downloads/courses/CSE594/Project/Project-Phase-1/SDSE-Phase-1/src/main/scala/ManageTrajectory.scala
+2022.10.15 13:25:38 WARN  no build target for: /Users/trickster/Downloads/courses/CSE594/Project/Project-Phase-1/SDSE-Phase-1/src/main/scala/ManageTrajectory.scala
+2022.10.15 13:26:05 WARN  no build target for: /Users/trickster/Downloads/courses/CSE594/Project/Project-Phase-1/SDSE-Phase-1/src/main/scala/ManageTrajectory.scala
+2022.10.15 13:26:08 WARN  no build target for: /Users/trickster/Downloads/courses/CSE594/Project/Project-Phase-1/SDSE-Phase-1/src/main/scala/ManageTrajectory.scala
+2022.10.15 13:26:09 WARN  no build target for: /Users/trickster/Downloads/courses/CSE594/Project/Project-Phase-1/SDSE-Phase-1/src/main/scala/ManageTrajectory.scala
+2022.10.15 13:28:24 WARN  no build target for: /Users/trickster/Downloads/courses/CSE594/Project/Project-Phase-1/SDSE-Phase-1/src/main/scala/ManageTrajectory.scala
+2022.10.15 13:28:32 WARN  no build target for: /Users/trickster/Downloads/courses/CSE594/Project/Project-Phase-1/SDSE-Phase-1/src/main/scala/ManageTrajectory.scala
+2022.10.15 13:29:56 WARN  no build target for: /Users/trickster/Downloads/courses/CSE594/Project/Project-Phase-1/SDSE-Phase-1/src/main/scala/ManageTrajectory.scala
+2022.10.15 13:30:02 WARN  no build target for: /Users/trickster/Downloads/courses/CSE594/Project/Project-Phase-1/SDSE-Phase-1/src/main/scala/ManageTrajectory.scala
+2022.10.15 13:30:02 WARN  no build target for: /Users/trickster/Downloads/courses/CSE594/Project/Project-Phase-1/SDSE-Phase-1/src/main/scala/ManageTrajectory.scala
+2022.10.15 13:30:16 WARN  no build target for: /Users/trickster/Downloads/courses/CSE594/Project/Project-Phase-1/SDSE-Phase-1/src/main/scala/ManageTrajectory.scala
+2022.10.15 13:37:29 WARN  no build target for: /Users/trickster/Downloads/courses/CSE594/Project/Project-Phase-1/SDSE-Phase-1/src/main/scala/ManageTrajectory.scala
+2022.10.15 13:37:29 WARN  no build target for: /Users/trickster/Downloads/courses/CSE594/Project/Project-Phase-1/SDSE-Phase-1/src/main/scala/ManageTrajectory.scala
+2022.10.15 13:37:29 WARN  no build target for: /Users/trickster/Downloads/courses/CSE594/Project/Project-Phase-1/SDSE-Phase-1/src/main/scala/ManageTrajectory.scala
+2022.10.15 13:37:45 WARN  no build target for: /Users/trickster/Downloads/courses/CSE594/Project/Project-Phase-1/SDSE-Phase-1/src/main/scala/ManageTrajectory.scala
+2022.10.15 13:37:46 WARN  no build target for: /Users/trickster/Downloads/courses/CSE594/Project/Project-Phase-1/SDSE-Phase-1/src/main/scala/ManageTrajectory.scala
+2022.10.15 13:37:56 WARN  no build target for: /Users/trickster/Downloads/courses/CSE594/Project/Project-Phase-1/SDSE-Phase-1/src/main/scala/ManageTrajectory.scala
+2022.10.15 13:38:01 WARN  no build target for: /Users/trickster/Downloads/courses/CSE594/Project/Project-Phase-1/SDSE-Phase-1/src/main/scala/ManageTrajectory.scala
+2022.10.15 13:38:07 WARN  no build target for: /Users/trickster/Downloads/courses/CSE594/Project/Project-Phase-1/SDSE-Phase-1/src/main/scala/ManageTrajectory.scala
+2022.10.15 13:38:08 WARN  no build target for: /Users/trickster/Downloads/courses/CSE594/Project/Project-Phase-1/SDSE-Phase-1/src/main/scala/ManageTrajectory.scala
+2022.10.15 13:38:27 WARN  no build target for: /Users/trickster/Downloads/courses/CSE594/Project/Project-Phase-1/SDSE-Phase-1/src/main/scala/ManageTrajectory.scala
+2022.10.15 13:38:41 WARN  no build target for: /Users/trickster/Downloads/courses/CSE594/Project/Project-Phase-1/SDSE-Phase-1/src/main/scala/ManageTrajectory.scala
+2022.10.15 13:38:41 WARN  no build target for: /Users/trickster/Downloads/courses/CSE594/Project/Project-Phase-1/SDSE-Phase-1/src/main/scala/ManageTrajectory.scala
+2022.10.15 13:38:41 WARN  no build target for: /Users/trickster/Downloads/courses/CSE594/Project/Project-Phase-1/SDSE-Phase-1/src/main/scala/ManageTrajectory.scala
+2022.10.15 13:38:51 WARN  no build target for: /Users/trickster/Downloads/courses/CSE594/Project/Project-Phase-1/SDSE-Phase-1/src/main/scala/ManageTrajectory.scala
+2022.10.15 13:38:54 WARN  no build target for: /Users/trickster/Downloads/courses/CSE594/Project/Project-Phase-1/SDSE-Phase-1/src/main/scala/ManageTrajectory.scala
+2022.10.15 13:38:55 WARN  no build target for: /Users/trickster/Downloads/courses/CSE594/Project/Project-Phase-1/SDSE-Phase-1/src/main/scala/ManageTrajectory.scala
+2022.10.15 13:38:55 WARN  no build target for: /Users/trickster/Downloads/courses/CSE594/Project/Project-Phase-1/SDSE-Phase-1/src/main/scala/ManageTrajectory.scala
+2022.10.15 13:38:55 WARN  no build target for: /Users/trickster/Downloads/courses/CSE594/Project/Project-Phase-1/SDSE-Phase-1/src/main/scala/ManageTrajectory.scala
+2022.10.15 13:38:58 WARN  no build target for: /Users/trickster/Downloads/courses/CSE594/Project/Project-Phase-1/SDSE-Phase-1/src/main/scala/ManageTrajectory.scala
+2022.10.15 13:39:01 WARN  no build target for: /Users/trickster/Downloads/courses/CSE594/Project/Project-Phase-1/SDSE-Phase-1/src/main/scala/ManageTrajectory.scala
+2022.10.15 13:40:33 WARN  no build target for: /Users/trickster/Downloads/courses/CSE594/Project/Project-Phase-1/SDSE-Phase-1/src/main/scala/ManageTrajectory.scala
+2022.10.15 13:40:33 WARN  no build target for: /Users/trickster/Downloads/courses/CSE594/Project/Project-Phase-1/SDSE-Phase-1/src/main/scala/ManageTrajectory.scala
+2022.10.15 13:40:56 WARN  no build target for: /Users/trickster/Downloads/courses/CSE594/Project/Project-Phase-1/SDSE-Phase-1/src/main/scala/ManageTrajectory.scala
+2022.10.15 13:40:57 WARN  no build target for: /Users/trickster/Downloads/courses/CSE594/Project/Project-Phase-1/SDSE-Phase-1/src/main/scala/ManageTrajectory.scala
+2022.10.15 13:41:03 WARN  no build target for: /Users/trickster/Downloads/courses/CSE594/Project/Project-Phase-1/SDSE-Phase-1/src/main/scala/ManageTrajectory.scala
+2022.10.15 13:41:03 WARN  no build target for: /Users/trickster/Downloads/courses/CSE594/Project/Project-Phase-1/SDSE-Phase-1/src/main/scala/ManageTrajectory.scala
+2022.10.15 13:41:04 WARN  no build target for: /Users/trickster/Downloads/courses/CSE594/Project/Project-Phase-1/SDSE-Phase-1/src/main/scala/ManageTrajectory.scala
+2022.10.15 13:41:07 WARN  no build target for: /Users/trickster/Downloads/courses/CSE594/Project/Project-Phase-1/SDSE-Phase-1/src/main/scala/ManageTrajectory.scala
+2022.10.15 13:41:07 WARN  no build target for: /Users/trickster/Downloads/courses/CSE594/Project/Project-Phase-1/SDSE-Phase-1/src/main/scala/ManageTrajectory.scala
+2022.10.15 13:41:56 WARN  no build target for: /Users/trickster/Downloads/courses/CSE594/Project/Project-Phase-1/SDSE-Phase-1/src/main/scala/ManageTrajectory.scala
+2022.10.15 13:42:03 WARN  no build target for: /Users/trickster/Downloads/courses/CSE594/Project/Project-Phase-1/SDSE-Phase-1/src/main/scala/ManageTrajectory.scala
+2022.10.15 13:42:03 WARN  no build target for: /Users/trickster/Downloads/courses/CSE594/Project/Project-Phase-1/SDSE-Phase-1/src/main/scala/ManageTrajectory.scala
+2022.10.15 13:42:25 WARN  no build target for: /Users/trickster/Downloads/courses/CSE594/Project/Project-Phase-1/SDSE-Phase-1/src/main/scala/ManageTrajectory.scala
+2022.10.15 13:42:26 WARN  no build target for: /Users/trickster/Downloads/courses/CSE594/Project/Project-Phase-1/SDSE-Phase-1/src/main/scala/ManageTrajectory.scala
+2022.10.15 13:42:33 WARN  no build target for: /Users/trickster/Downloads/courses/CSE594/Project/Project-Phase-1/SDSE-Phase-1/src/main/scala/ManageTrajectory.scala
+2022.10.15 13:42:33 WARN  no build target for: /Users/trickster/Downloads/courses/CSE594/Project/Project-Phase-1/SDSE-Phase-1/src/main/scala/ManageTrajectory.scala
+2022.10.15 13:43:52 WARN  no build target for: /Users/trickster/Downloads/courses/CSE594/Project/Project-Phase-1/SDSE-Phase-1/src/main/scala/ManageTrajectory.scala
+2022.10.15 13:45:37 WARN  no build target for: /Users/trickster/Downloads/courses/CSE594/Project/Project-Phase-1/SDSE-Phase-1/src/main/scala/ManageTrajectory.scala
+2022.10.15 13:45:38 WARN  no build target for: /Users/trickster/Downloads/courses/CSE594/Project/Project-Phase-1/SDSE-Phase-1/src/main/scala/ManageTrajectory.scala
+2022.10.15 13:45:51 WARN  no build target for: /Users/trickster/Downloads/courses/CSE594/Project/Project-Phase-1/SDSE-Phase-1/src/main/scala/ManageTrajectory.scala
+2022.10.15 13:45:56 WARN  no build target for: /Users/trickster/Downloads/courses/CSE594/Project/Project-Phase-1/SDSE-Phase-1/src/main/scala/ManageTrajectory.scala
+2022.10.15 13:45:59 WARN  no build target for: /Users/trickster/Downloads/courses/CSE594/Project/Project-Phase-1/SDSE-Phase-1/src/main/scala/ManageTrajectory.scala
+2022.10.15 13:46:00 WARN  no build target for: /Users/trickster/Downloads/courses/CSE594/Project/Project-Phase-1/SDSE-Phase-1/src/main/scala/ManageTrajectory.scala
+2022.10.15 13:46:13 WARN  no build target for: /Users/trickster/Downloads/courses/CSE594/Project/Project-Phase-1/SDSE-Phase-1/src/main/scala/ManageTrajectory.scala
+2022.10.15 13:46:14 WARN  no build target for: /Users/trickster/Downloads/courses/CSE594/Project/Project-Phase-1/SDSE-Phase-1/src/main/scala/ManageTrajectory.scala
+2022.10.15 13:46:13 WARN  no build target for: /Users/trickster/Downloads/courses/CSE594/Project/Project-Phase-1/SDSE-Phase-1/src/main/scala/ManageTrajectory.scala
+2022.10.15 13:46:32 WARN  no build target for: /Users/trickster/Downloads/courses/CSE594/Project/Project-Phase-1/SDSE-Phase-1/src/main/scala/ManageTrajectory.scala
+2022.10.15 13:46:33 WARN  no build target for: /Users/trickster/Downloads/courses/CSE594/Project/Project-Phase-1/SDSE-Phase-1/src/main/scala/ManageTrajectory.scala
+2022.10.15 13:46:34 WARN  no build target for: /Users/trickster/Downloads/courses/CSE594/Project/Project-Phase-1/SDSE-Phase-1/src/main/scala/ManageTrajectory.scala
+2022.10.15 13:46:34 WARN  no build target for: /Users/trickster/Downloads/courses/CSE594/Project/Project-Phase-1/SDSE-Phase-1/src/main/scala/ManageTrajectory.scala
+2022.10.15 13:46:38 WARN  no build target for: /Users/trickster/Downloads/courses/CSE594/Project/Project-Phase-1/SDSE-Phase-1/src/main/scala/ManageTrajectory.scala
+2022.10.15 13:48:18 WARN  no build target for: /Users/trickster/Downloads/courses/CSE594/Project/Project-Phase-1/SDSE-Phase-1/src/main/scala/ManageTrajectory.scala
+2022.10.15 13:48:53 WARN  no build target for: /Users/trickster/Downloads/courses/CSE594/Project/Project-Phase-1/SDSE-Phase-1/src/main/scala/Entrance.scala
+2022.10.15 13:49:24 WARN  no build target for: /Users/trickster/Downloads/courses/CSE594/Project/Project-Phase-1/SDSE-Phase-1/src/main/scala/ManageTrajectory.scala
+2022.10.15 13:49:24 WARN  no build target for: /Users/trickster/Downloads/courses/CSE594/Project/Project-Phase-1/SDSE-Phase-1/src/main/scala/ManageTrajectory.scala
+2022.10.15 13:50:16 WARN  no build target for: /Users/trickster/Downloads/courses/CSE594/Project/Project-Phase-1/SDSE-Phase-1/src/main/scala/ManageTrajectory.scala
+2022.10.15 13:50:17 WARN  no build target for: /Users/trickster/Downloads/courses/CSE594/Project/Project-Phase-1/SDSE-Phase-1/src/main/scala/ManageTrajectory.scala
+2022.10.15 13:50:17 WARN  no build target for: /Users/trickster/Downloads/courses/CSE594/Project/Project-Phase-1/SDSE-Phase-1/src/main/scala/ManageTrajectory.scala
+2022.10.15 13:50:20 WARN  no build target for: /Users/trickster/Downloads/courses/CSE594/Project/Project-Phase-1/SDSE-Phase-1/src/main/scala/ManageTrajectory.scala
+2022.10.15 13:50:25 WARN  no build target for: /Users/trickster/Downloads/courses/CSE594/Project/Project-Phase-1/SDSE-Phase-1/src/main/scala/ManageTrajectory.scala
+2022.10.15 13:50:25 WARN  no build target for: /Users/trickster/Downloads/courses/CSE594/Project/Project-Phase-1/SDSE-Phase-1/src/main/scala/ManageTrajectory.scala
+2022.10.15 13:50:32 WARN  no build target for: /Users/trickster/Downloads/courses/CSE594/Project/Project-Phase-1/SDSE-Phase-1/src/main/scala/ManageTrajectory.scala
+2022.10.15 13:50:37 WARN  no build target for: /Users/trickster/Downloads/courses/CSE594/Project/Project-Phase-1/SDSE-Phase-1/src/main/scala/ManageTrajectory.scala
+2022.10.15 13:50:39 WARN  no build target for: /Users/trickster/Downloads/courses/CSE594/Project/Project-Phase-1/SDSE-Phase-1/src/main/scala/ManageTrajectory.scala
+2022.10.15 13:50:53 WARN  no build target for: /Users/trickster/Downloads/courses/CSE594/Project/Project-Phase-1/SDSE-Phase-1/src/main/scala/ManageTrajectory.scala
+2022.10.15 13:55:38 WARN  no build target for: /Users/trickster/Downloads/courses/CSE594/Project/Project-Phase-1/SDSE-Phase-1/src/main/scala/ManageTrajectory.scala
+2022.10.15 13:55:40 INFO  shutting down Metals
+2022.10.15 15:22:51 INFO  tracing is disabled for protocol LSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/trickster/Downloads/courses/CSE594/Project/Project-Phase-1/SDSE-Phase-1/.metals/lsp.trace.json or /Users/trickster/Library/Caches/org.scalameta.metals/lsp.trace.json
+2022.10.15 15:22:52 INFO  logging to file /Users/trickster/Downloads/courses/CSE594/Project/Project-Phase-1/SDSE-Phase-1/.metals/metals.log
+2022.10.15 15:22:52 INFO  Started: Metals version 0.11.9 in workspace '/Users/trickster/Downloads/courses/CSE594/Project/Project-Phase-1/SDSE-Phase-1' for client Visual Studio Code 1.71.2.
+2022.10.15 15:22:54 INFO  time: initialize in 1.62s
+2022.10.15 15:22:53 WARN  Build server is not auto-connectable.
+2022.10.15 15:40:49 INFO  shutting down Metals
+2022.10.15 15:41:08 INFO  tracing is disabled for protocol LSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/trickster/Downloads/courses/CSE594/Project/Project-Phase-1/SDSE-Phase-1/.metals/lsp.trace.json or /Users/trickster/Library/Caches/org.scalameta.metals/lsp.trace.json
+2022.10.15 15:41:09 INFO  logging to file /Users/trickster/Downloads/courses/CSE594/Project/Project-Phase-1/SDSE-Phase-1/.metals/metals.log
+2022.10.15 15:41:09 INFO  Started: Metals version 0.11.9 in workspace '/Users/trickster/Downloads/courses/CSE594/Project/Project-Phase-1/SDSE-Phase-1' for client Visual Studio Code 1.71.2.
+2022.10.15 15:41:10 INFO  time: initialize in 1.65s
+2022.10.15 15:41:10 WARN  Build server is not auto-connectable.
+2022.10.15 15:47:51 WARN  no build target for: /Users/trickster/Downloads/courses/CSE594/Project/Project-Phase-1/SDSE-Phase-1/src/main/scala/ManageTrajectory.scala
+2022.10.15 15:47:53 INFO  no build target found for /Users/trickster/Downloads/courses/CSE594/Project/Project-Phase-1/SDSE-Phase-1/src/main/scala/ManageTrajectory.scala. Using presentation compiler with project's scala-library version: 3.2.0
+2022.10.15 15:47:56 INFO  time: code lens generation in 3.77s
+2022.10.15 15:48:32 WARN  no build target for: /Users/trickster/Downloads/courses/CSE594/Project/Project-Phase-1/SDSE-Phase-1/src/main/scala/ManageTrajectory.scala
+2022.10.15 15:48:37 WARN  no build target for: /Users/trickster/Downloads/courses/CSE594/Project/Project-Phase-1/SDSE-Phase-1/src/main/scala/ManageTrajectory.scala
