@@ -1,0 +1,507 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <script src="https://unpkg.com/deck.gl@8.1.0/dist.min.js"></script>
+    <script src="https://unpkg.com/@deck.gl/layers@8.1.0/dist.min.js"></script>
+    <script src="https://unpkg.com/@deck.gl/geo-layers@8.1.0/dist.min.js"></script>
+    <script src="https://unpkg.com/@deck.gl/arcgis@8.1.0/dist.min.js"></script>
+    <link rel="stylesheet" href="https://js.arcgis.com/4.15/esri/themes/light/main.css" />
+    <script src="https://js.arcgis.com/4.15/"></script>
+    <style>
+        html,
+        body {
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+
+        #result {
+            position: absolute;
+            left: 25%;
+            top: 45%;
+            padding: 0;
+            margin: 0;
+            height: 50%;
+            width: 50%;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <form>
+        <h2> CSE 594 - Project 2 Options</h2>
+        <select id="dropDown" style="width:300px; margin:0 auto;">
+            <option value="default" selected="selected"> Please select the option </option>
+            <option value="one" id="dd1"> Show the trips layer from deck.gl </option>
+            <option value="two" id="dd2"> Load trajectory dataset </option>
+            <option value="three" id="dd3"> Input for spatial range query </option>
+            <option value="four" id="dd4"> Input for spatiotemporal range query </option>
+            <option value="five" id="dd5"> Get K Nearest Neighbors </option>
+        </select>
+    </form>
+
+    <div id="wrapperOne" onsubmit="doFirst()" style="display: none;">
+        <h3>Show the trips layer from deck.gl</h3>
+    </div>
+
+    <div id="wrapperTwo" style="display: none;">
+        <h3>Select Trajectory Data Files:</h3>
+        <!-- <form onsubmit="doSecond(); return false">
+            <label for="myfile">Select files:</label>
+            <input type="file" id="myfile" name="myfile" multiple><br><br>
+            <input type="submit">
+        </form> -->
+        <label for="filePath">Provide Data file Path:</label>
+        <input type="text" id="filePath" name="filePath"><br><br>
+        <input type="button" onclick="doSecond(event)" value="Submit">
+    </div>
+
+    <div id="wrapperThree" style="display: none;">
+        <h3>Provide Input for spatial range query</h3>
+
+        <!-- <form onsubmit="null"> -->
+        <label for="latMin">Minimum Latitude:</label>
+        <input type="text" id="latMin" name="latMin"><br><br>
+        <label for="lonMin">Minimum Longitude:</label>
+        <input type="text" id="lonMin" name="lonMin"><br><br>
+        <label for="latMax">Maximum Latitude:</label>
+        <input type="text" id="latMax" name="latMax"><br><br>
+        <label for="lonMax">Maximum Longitude:</label>
+        <input type="text" id="lonMax" name="lonMax"><br><br>
+        <input type="button" onclick="doThird(event)" value="Submit">
+        <!-- </form> -->
+    </div>
+
+    <div id="wrapperFour" style="display: none;">
+        <h3>Provide Input for spatiotemporal range query</h3>
+
+        <!-- <form onsubmit="doFourth(); return false"> -->
+        <label for="minTime">Minimum Time:</label>
+        <input type="text" id="minTime" name="minTime"><br><br>
+        <label for="maxTime">Maximum Time:</label>
+        <input type="text" id="maxTime" name="maxTime"><br><br>
+
+        <label for="latMin1">Minimum Latitude:</label>
+        <input type="text" id="latMin1" name="latMin1"><br><br>
+        <label for="lonMin1">Minimum Longitude:</label>
+        <input type="text" id="lonMin1" name="lonMin1"><br><br>
+        <label for="latMax">Maximum Latitude:</label>
+        <input type="text" id="latMax1" name="latMax1"><br><br>
+        <label for="lonMax1">Maximum Longitude:</label>
+        <input type="text" id="lonMax1" name="lonMax1"><br><br>
+        <input type="button" onclick="doFourth(event)" value="Submit">
+        <!-- </form> -->
+    </div>
+
+    <div id="wrapperFive" style="display: none;">
+        <h3>Provide Input to Get K Nearest Neighbors</h3>
+
+        <!-- <form onsubmit="doFifth(); return false"> -->
+        <label for="trajectoryId">Trajectory ID:</label>
+        <input type="text" id="trajectoryId" name="trajectoryId"><br><br>
+        <label for="neighbors">Number of Neighbors:</label>
+        <input type="text" id="neighbors" name="neighbors"><br><br>
+        <input type="button" onclick="doFifth(event)" value="Submit">
+        <!-- </form> -->
+    </div>
+
+    <div id="wrapperResult" style="display: block;">
+        <h4>Result Data from Query</h4>
+        <div id="result"></div>
+    </div>
+
+
+
+    <script>
+
+        let FILE_PATH = "";
+        const BASE_URL = "http://localhost:8000/";
+
+        function parseJSON(response) {
+            return new Promise(resolve =>
+                response.json().then(json =>
+                    resolve({
+                        status: response.status,
+                        ok: response.ok,
+                        json
+                    })
+                )
+            );
+        }
+
+        const sleep = (ms) => {
+            return new Promise(resolve => setTimeout(resolve, ms));
+        }
+
+        async function load_data() {
+            const url = BASE_URL + "load_data";
+
+            return new Promise((resolve, reject) => {
+                fetch(url)
+                    .then(parseJSON)
+                    .then((response) => {
+                        if (response.ok) {
+                            return resolve(response.json);
+                        }
+                        return reject(response.json.message);
+                    }).catch(error => {
+                        console.log(error);
+                    });
+            })
+        }
+
+        async function loadFile(filePath) {
+            const url = BASE_URL + "loadFile";
+            const payload = {
+                filePath: filePath
+            };
+            return new Promise((resolve, reject) => {
+                fetch(url, {
+                    method: "POST",
+                    body: JSON.stringify(payload),
+                    headers: {
+                        "Content-Type": "application/json",
+                    },
+                    timeout: 60000,
+                })
+                    .then(parseJSON)
+                    .then((response) => {
+                        if (response.ok) {
+                            return resolve(response.json);
+                        }
+                        return reject(response.json.message);
+                    }).catch(error => {
+                        console.log(error);
+                    });
+            })
+        }
+
+        function spatial_data_query(lat_min, lat_max, lon_min, lon_max) {
+            const url = BASE_URL + "spatial_data_query";
+
+            const payload = {
+                lat_min: lat_min,
+                lat_max: lat_max,
+                lon_min: lon_min,
+                lon_max: lon_max
+            };
+
+            return new Promise((resolve, reject) => {
+                fetch(
+                    url, {
+                    method: "POST",
+                    body: JSON.stringify(payload),
+                    headers: {
+                        "Content-Type": "application/json",
+                    },
+                    timeout: 60000,
+                })
+                    .then(parseJSON)
+                    .then((response) => {
+                        if (response.ok) {
+                            console.log('got spatial_data_query promise response');
+                            return resolve(response.json);
+                        }
+                        return reject(response.json.message);
+                    }).catch(error => {
+                        console.log(error);
+                    });
+            })
+
+        }
+
+        async function spatial_data_Temporal_query(min_Time, max_Time, lat_min1, lat_max1, lon_min1, lon_max1) {
+            const url = BASE_URL + "spatial_data_Temporal_query";
+
+            const payload = {
+                min_Time: min_Time,
+                max_Time: max_Time,
+                lat_min: lat_min1,
+                lat_max: lat_max1,
+                lon_min: lon_min1,
+                lon_max: lon_max1
+            };
+
+            return new Promise((resolve, reject) => {
+                fetch(
+                    url, {
+                    method: "POST",
+                    body: JSON.stringify(payload),
+                    headers: {
+                        "Content-Type": "application/json",
+                    },
+                })
+                    .then(parseJSON)
+                    .then((response) => {
+                        if (response.ok) {
+                            return resolve(response.json);
+                        }
+                        return reject(response.json.message);
+                    }).catch(error => {
+                        console.log(error);
+                    });
+            })
+
+        }
+
+
+        async function spatial_knn_query(trajectory_Id, neigh_bors) {
+            const url = BASE_URL + "spatial_knn_query";
+
+            const payload = {
+                trajectory_id: trajectory_Id,
+                neighbor: neigh_bors
+            };
+
+            return new Promise((resolve, reject) => {
+                fetch(
+                    url, {
+                    method: "POST",
+                    body: JSON.stringify(payload),
+                    headers: {
+                        "Content-Type": "application/json",
+                    },
+                    timeout: 60000,
+                })
+                    .then(parseJSON)
+                    .then((response) => {
+                        if (response.ok) {
+                            return resolve(response.json);
+                        }
+                        return reject(response.json.message);
+                    }).catch(error => {
+                        console.log(error);
+                    });
+            })
+
+        }
+
+
+        document.querySelector("#dropDown").addEventListener("change", function () {
+            changeDisplay();
+        })
+        function changeDisplay() {
+            const dropdown = document.querySelector("#dropDown").value;
+            const w1 = document.querySelector("#wrapperOne")
+            const w2 = document.querySelector("#wrapperTwo")
+            const w3 = document.querySelector("#wrapperThree")
+            const w4 = document.querySelector("#wrapperFour")
+            const w5 = document.querySelector("#wrapperFive")
+            const wr = document.querySelector("#wrapperResult")
+
+            switch (dropdown) {
+                case 'one':
+                    doFirst();
+                    w1.style.display = "block"
+                    w2.style.display = "none"
+                    w3.style.display = "none"
+                    w4.style.display = "none"
+                    w5.style.display = "none"
+                    wr.style.display = "none"
+                    break;
+                case 'two':
+                    w1.style.display = "none"
+                    w2.style.display = "block"
+                    w3.style.display = "none"
+                    w4.style.display = "none"
+                    w5.style.display = "none"
+                    wr.style.display = "none"
+                    break;
+                case 'three':
+                    w1.style.display = "none"
+                    w2.style.display = "none"
+                    w3.style.display = "block"
+                    w4.style.display = "none"
+                    w5.style.display = "none"
+                    wr.style.display = "none"
+                    break;
+                case 'four':
+                    w1.style.display = "none"
+                    w2.style.display = "none"
+                    w3.style.display = "none"
+                    w4.style.display = "block"
+                    w5.style.display = "none"
+                    wr.style.display = "none"
+                    break;
+                case 'five':
+                    w1.style.display = "none"
+                    w2.style.display = "none"
+                    w3.style.display = "none"
+                    w4.style.display = "none"
+                    w5.style.display = "block"
+                    wr.style.display = "none"
+                    break;
+            }
+        }
+
+
+
+        async function doFirst() {
+            let data;
+            console.log("doFirst");
+            load_data().then((response) => {
+                data = response.data;
+            })
+            await sleep(2000);
+            const wr = document.querySelector("#wrapperResult").style.display = "block";
+            plotTripsLayer(data);
+        }
+
+        // document.querySelector("#myfile").addEventListener("change", (event) => { loadFile(event) });
+
+        // var loadFile = function (event) {
+
+        // };
+
+        async function doSecond(event) {
+            console.log(event.target)
+            let data;
+            const filePath = document.querySelector("#filePath").value;
+            console.log(filePath);
+            loadFile(filePath).then((response) => {
+                data = response.data;
+            })
+            await sleep(2000);
+            const wr = document.querySelector("#wrapperResult").style.display = "block";
+            plotTripsLayer(data);
+        }
+
+        async function doThird(event) {
+            event.preventDefault();
+
+            const lat_min = document.querySelector("#latMin").value;
+            const lon_min = document.querySelector("#lonMin").value;
+            const lat_max = document.querySelector("#latMax").value;
+            const lon_max = document.querySelector("#lonMax").value;
+            let data;
+            console.log("doThird()");
+            spatial_data_query(lat_min, lat_max, lon_min, lon_max).then(data => {
+                // data = spatial_data_query(lat_min,lat_max,lon_min,lon_max)
+                console.log("OUT");
+                // await sleep(2000);
+
+                const wr = document.querySelector("#wrapperResult").style.display = "block";
+                plotTripsLayer(data);
+
+                console.log(lat_min, lat_max, lon_min, lon_max);
+            });
+        }
+
+
+        async function doFourth() {
+            const min_Time = document.querySelector("#minTime").value;
+            const max_Time = document.querySelector("#maxTime").value;
+            const lat_min1 = document.querySelector("#latMin1").value;
+            const lon_min1 = document.querySelector("#lonMin1").value;
+            const lat_max1 = document.querySelector("#latMax1").value;
+            const lon_max1 = document.querySelector("#lonMax1").value;
+
+            let data;
+            spatial_data_Temporal_query(min_Time, max_Time, lat_min1, lat_max1, lon_min1, lon_max1)
+                .then((response) => {
+                    console.log(response);
+                    data = response;
+                    const wr = document.querySelector("#wrapperResult").style.display = "block";
+                    plotTripsLayer(data);
+                    console.log(min_Time, max_Time, lat_min1, lat_max1, lon_min1, lon_max1);
+                }).catch(error => {
+                    console.log(error);
+                });
+            await sleep(2000);
+
+
+        }
+
+        async function doFifth() {
+            const trajectory_Id = document.querySelector("#trajectoryId").value;
+            const neigh_bors = document.querySelector("#neighbors").value;
+
+            let data;
+            spatial_knn_query(trajectory_Id, neigh_bors)
+                .then((response) => {
+                    console.log(response);
+                    data = response;
+                    const wr = document.querySelector("#wrapperResult").style.display = "block";
+                    plotTripsLayer(data);
+
+                    console.log(trajectory_Id, neigh_bors);
+                }).catch(error => {
+                    console.log(error);
+                });
+            await sleep(2000);
+        }
+
+
+        function plotTripsLayer(data) {
+            console.log(typeof data.data)
+            console.log(data.data)
+            require(["esri/Map", "esri/views/MapView"], function (Map, MapView) {
+                const TripsLayer = deck.TripsLayer;
+
+                deck.loadArcGISModules().then(function ({ DeckLayer }) {
+                    const layer = new DeckLayer({
+                        "deck.layers": []
+                    });
+
+                    setInterval(() => {
+                        layer.deck.layers = [
+                            new TripsLayer({
+                                id: 'trips',
+                                // data: [{"trajectory_id":0,"vehicle_id":0,"timestamp":[1664515076,1664515106],"location":[[-111.92518390436581, 33.414237578989216],[-111.92518384063071, 33.414183655342725]]}
+                                // ,{"trajectory_id":1,"vehicle_id":1,"timestamp":[1664514836,1664514851,1664514866,1664514881,1664514896],"location":[[-111.92285145187222,33.41427909937204],[-111.92282161935306,33.414252073168285],[-111.92285157742808,33.41422517574458],[-111.92282153563072,33.41419819611907],[-111.92282149374189,33.414171205538906]]}
+                                // ,{"trajectory_id":0,"vehicle_id":0,"timestamp":[1664511371,1664511386,1664511401,1664511416,1664511431,1664511446,1664512181,1664512196,1664512211,1664512226,1664512241,1664515751,1664515766,1664515781,1664515796,1664515811,1664516546,1664516561,1664516591,1664516606],"location":[[-111.92518382004077,33.414291502635706],[-111.92518396810091,33.414264523000654],[-111.9251839362123,33.414237578989216],[-111.92518390436581,33.41421059935417],[-111.9251838724772,33.414183655342725],[-111.92518384063071,33.41415667570768],[-111.9251838087421,33.41427408234834],[-111.92518394751099,33.4142471027133],[-111.92518391562238,33.41422015870185],[-111.92518388377589,33.41419317906681],[-111.92518385188728,33.41416623505537],[-111.92518382004077,33.414264523000654],[-111.9251839362123,33.414237578989216],[-111.92518390436581,33.41421059935417],[-111.9251838724772,33.414183655342725],[-111.92518384063071,33.41415667570768],[-111.9251838087421,33.41427408234834],[-111.92518394751099,33.4142471027133],[-111.92518391562238,33.41419317906681],[-111.92518385188728,33.41416623505537]]}
+                                // ],
+                                data: data.data,
+                                // data: "https://raw.githubusercontent.com/uber-common/deck.gl-data/master/examples/trips/trips-v7.json",
+                                getPath: d => d.location,
+                                getTimestamps: d => d.timestamp,
+                                getColor: d => (d.vehicle_id % 2 == 0 ? [253, 128, 93] : [23, 184, 190]),
+                                opacity: 1.0,
+                                widthMinPixels: 4,
+                                rounded: true,
+                                trailLength: 180,
+                                currentTime: data.min_ts,
+                                shadowEnabled: false
+                                // getPath: d => d.location,
+                                // getTimestamps: d => d.timestamp/1000,
+                                // getColor: d => (d.trajectory_id === 0 ? [253, 128, 93] : [23, 184, 190]),
+                                // opacity: 1.0,
+                                // widthMinPixels: 4,
+                                // rounded: true,
+                                // trailLength: 180,
+                                // currentTime: (performance.now() % 10000) / 10,
+                                // // currentTime:data.min_ts/1000,
+                                // shadowEnabled: false
+                            })
+                        ];
+                    }, 50);
+
+                    // In the ArcGIS API for JavaScript the MapView is responsible
+                    // for displaying a Map, which usually contains at least a basemap.
+                    const mapView = new MapView({
+                        container: "result",
+                        map: new Map({
+                            basemap: "dark-gray-vector",
+                            layers: [layer]
+                        }),
+                        // center: [-111.92518390436581, 33.414237578989216],
+                        center: data.center,
+                        // center: [-74, 40.72],
+                        zoom: 14
+                    });
+                });
+            });
+        }
+    </script>
+</body>
+
+</html>
