@@ -13,3 +13,5 @@ Real-time visualization ensures that users can dynamically explore and interpret
 API Integration:
 The front-end interface will communicate with the underlying Phase-1 Apache Sedona project through a meticulously designed API.
 The API will facilitate the transfer of inputs and outputs between the user interface and the geospatial processing engine.
+
+Technology Integration: Utilized Apache Sedona, an open-source library for geospatial analytics, to process and analyze large-scale spatial datasets efficiently. Integrated Deck.gl, a WebGL-powered framework, for advanced data visualization in the browser.
